@@ -1,0 +1,3 @@
+CREATE TABLE company(id INT AUTO_INCREMENT,name VARCHAR(50),email VARCHAR(50),password VARCHAR(30),PRIMARY KEY(id));
+CREATE TABLE user(id INT AUTO_INCREMENT, name VARCHAR(50), email VARCHAR(50), password VARCHAR(50),PRIMARY KEY(id));
+create table ticket(id INT AUTO_INCREMENT, title VARCHAR(50), status VARCHAR(20), priority VARCHAR(20), user_id INT, company_id INT , FOREIGN KEY(user_id) REFERENCES user(id), FOREIGN KEY(company_id) REFERENCES company(id),PRIMARY KEY(id));

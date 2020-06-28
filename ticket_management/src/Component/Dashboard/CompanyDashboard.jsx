@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { uuidv4 } from 'uuid'
 import { viewTicket } from '../../Redux/action'
 import Navbar from '../Common/Navbar'
 import Pagination from './Pagination'

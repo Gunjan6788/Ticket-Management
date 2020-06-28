@@ -6,7 +6,6 @@ import {
   TICKET_REPORT,
   LOGOUT,
   VIEW_TICKET,
-  CHANGE_STATUS,
   EDIT_TICKET,
   GET_COMMENTS,
   ADD_COMMENT
@@ -112,10 +111,6 @@ export const viewTicket = (company_id,page,per_page) => dispatch => {
 }
 
 // update ticket status
-export const changeStatusSuccess = payload => ({
-  type: CHANGE_STATUS,
-  payload
-})
 
 export const changeStatus = payload => dispatch => {
   console.log(payload)
@@ -126,7 +121,8 @@ export const changeStatus = payload => dispatch => {
   axios.get(`http://127.0.0.1:5000/change_status/${ticket_id}/${status}`)
     .then(res => res.data)
     .then(res=>dispatch(viewTicket(id)))
-    .then(res => dispatch(changeStatusSuccess(res)))
+    .then(res => dispatch(getComment(ticket_id)))
+    .then(alert("Status Updated Successfully"))
     .catch(err => console.log(err))
 }
 

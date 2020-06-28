@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { viewTicket } from '../../Redux/action'
-import Navbar from '../Common/Navbar'
+import {v4 as uuidv4} from 'uuid'
 
 class Pagination extends Component {
     constructor(props) {
@@ -11,8 +11,7 @@ class Pagination extends Component {
         this.state = {
             priority: '',
             status: '',
-            curr_page: 1,
-            flag: false
+            curr_page: 1
         }
     }
 
@@ -34,9 +33,8 @@ class Pagination extends Component {
     }
 
     render() {
-        const { view_ticket, viewTicket, loginSuccess } = this.props
-        let { curr_page, flag } = this.state
-        // console.log(view_ticket)
+        const { view_ticket } = this.props
+        let { curr_page } = this.state
         let arr = []
 
         for (let i = 1; i <= view_ticket.total_pages; i++)
@@ -53,7 +51,8 @@ class Pagination extends Component {
                             </button>
                         </li>
                         {
-                            arr.map(item => <li className="page-item">
+                            arr.map(item => 
+                            <li key={uuidv4()} className="page-item">
                                 <button className="page-link" onClick={() => this.handlePagination(item)}>
                                     <Link to={`/companyDashboard/page/${item}`}>
                                         {item}

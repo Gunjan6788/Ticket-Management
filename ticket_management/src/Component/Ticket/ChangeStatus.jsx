@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Navbar from '../Common/Navbar'
 import { changeStatus, getComment, addComment } from '../../Redux/action'
-import { uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 import { format } from 'fecha'
 
 class ChangeStat extends Component {
@@ -46,7 +46,7 @@ class ChangeStat extends Component {
         const { view_ticket, match, getComments, loginSuccess, addComment } = this.props
 
         const data = view_ticket.data.find(item => item.id === Number(match.params.id))
-        console.log(data, view_ticket.data, getComments, loginSuccess)
+        // console.log(data, view_ticket.data, getComments, loginSuccess)
 
         return (
             <>
@@ -87,10 +87,9 @@ class ChangeStat extends Component {
 
                                 <div className="m-2 p-2 bg-dark">
                                     <div className="float-right ">
-
                                         {
                                             getComments && getComments.map(item => (
-                                                <div className="border rounded m-3" style={{ width: "300px" }}>
+                                                <div key={uuidv4()} className="border rounded m-3" style={{ width: "300px" }}>
                                                     <div className="bg-light">
                                                         {
                                                             this.props.loginSuccess.role === "user" ?

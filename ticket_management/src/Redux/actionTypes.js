@@ -5,7 +5,6 @@ export const ADD_TICKET = 'ADD_TICKET'
 export const TICKET_REPORT = 'TICKET_REPORT'
 export const LOGOUT = 'LOGOUT'
 export const VIEW_TICKET = 'VIEW_TICKET'
-export const CHANGE_STATUS = 'CHANGE_STATUS'
 export const EDIT_TICKET = "EDIT_TICKET"
 export const GET_COMMENTS = "GET_COMMENTS"
 export const ADD_COMMENT = "ADD_COMMENT"

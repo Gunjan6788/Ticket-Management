@@ -13,21 +13,21 @@ The organization is also able to handle the raised tickets.
 
 
 To know better about project ,some images of project are shown below:
-<li>Home page of user</li>
+<li>Home page of user in which user can add or view tickets.</li>
 <img src="ticket_management/public/img1.png" style = "margin:20px"/>
 
 
-<li>User can see their raised tickets</li>
+<li>User can see their raised tickets.</li>
 <img src="ticket_management/public/img2.png" style = "margin:20px"/>
 
 
-<li>User can chat with the organization</li>
+<li>User can chat with the organization.</li>
 <img src="ticket_management/public/img3.png" style = "margin:20px"/>
 
-<li>Company can change the status of the ticket</li>
+<li>Company can change the status of the ticket.</li>
 <img src="ticket_management/public/img4.png" style = "margin:20px"/>
 
-<li>To login on user or company use: email=test@gmail.com , password=test</li>
+<li>To login on user or company use: email = test@gmail.com , password = test</li>
 
 
 ### Getting Started

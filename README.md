@@ -24,7 +24,7 @@ To know better about project ,some images of project are shown below:
 <li>User can chat with the organization</li>
 <img src="ticket_management/public/img3.png" style = "margin:20px"/>
 
-<li></li>
+<li>Company can change the status of the ticket</li>
 <img src="ticket_management/public/img4.png" style = "margin:20px"/>
 
 <li>To login on user or company use: email=test@gmail.com , password=test</li>

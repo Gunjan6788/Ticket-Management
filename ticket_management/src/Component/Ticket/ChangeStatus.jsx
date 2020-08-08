@@ -46,7 +46,7 @@ class ChangeStat extends Component {
         const { view_ticket, match, getComments, loginSuccess, addComment } = this.props
 
         const data = view_ticket.data.find(item => item.id === Number(match.params.id))
-        // console.log(data, view_ticket.data, getComments, loginSuccess)
+        console.log(data, view_ticket.data, getComments, loginSuccess)
 
         return (
             <>

@@ -6,6 +6,7 @@ import {
     TICKET_REPORT,
     LOGOUT,
     VIEW_TICKET,
+    CHANGE_STATUS,
     EDIT_TICKET,
     GET_COMMENTS
 } from './actionTypes'
@@ -67,6 +68,9 @@ export default (state = initState, { type, payload }) => {
                 ...state,
                 view_ticket:payload
             }
+        case CHANGE_STATUS:
+            alert(payload)
+            break
         case EDIT_TICKET:
             alert(payload)
             return {

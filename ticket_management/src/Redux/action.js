@@ -6,6 +6,7 @@ import {
   TICKET_REPORT,
   LOGOUT,
   VIEW_TICKET,
+  CHANGE_STATUS,
   EDIT_TICKET,
   GET_COMMENTS,
   ADD_COMMENT
@@ -111,6 +112,10 @@ export const viewTicket = (company_id,page,per_page) => dispatch => {
 }
 
 // update ticket status
+export const changeStatusSuccess = payload => ({
+  type: CHANGE_STATUS,
+  payload
+})
 
 export const changeStatus = payload => dispatch => {
   console.log(payload)
@@ -122,7 +127,6 @@ export const changeStatus = payload => dispatch => {
     .then(res => res.data)
     .then(res=>dispatch(viewTicket(id)))
     .then(res => dispatch(getComment(ticket_id)))
-    .then(alert("Status Updated Successfully"))
     .catch(err => console.log(err))
 }
 

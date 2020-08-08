@@ -23,7 +23,7 @@ export const loginSuccess = payload => ({
 export const login = payload => dispatch => {
   console.log(payload)
 
-  axios.post('http://127.0.0.1:5000/login', payload)
+  axios.post('http://ticketbackend.gunjan.tech/login', payload)
     .then(res => res.data)
     .then(res => dispatch(loginSuccess(res)))
     .catch(err => console.log(err))
@@ -38,7 +38,7 @@ export const signupSuccess = payload => ({
 export const signup = payload => dispatch => {
   console.log(payload)
 
-  axios.post('http://127.0.0.1:5000/signup', payload)
+  axios.post('http://ticketbackend.gunjan.tech/signup', payload)
     .then(res => res.data)
     .then(res => dispatch(signupSuccess(res)))
     .catch(err => console.log(err))
@@ -52,7 +52,7 @@ export const companyDetailsSuccess = payload => ({
 })
 
 export const companyDetails = payload => dispatch => {
-  axios.get('http://127.0.0.1:5000/company_details')
+  axios.get('http://ticketbackend.gunjan.tech/company_details')
     .then(res => res.data)
     .then(res => dispatch(companyDetailsSuccess(res)))
     .catch(err => console.log(err))
@@ -66,7 +66,7 @@ export const addTicketSuccess = payload => ({
 
 export const addTicket = payload => dispatch => {
   console.log(payload)
-  axios.post('http://127.0.0.1:5000/add_ticket',payload)
+  axios.post('http://ticketbackend.gunjan.tech/add_ticket',payload)
     .then(res => res.data)
     .then(res => dispatch(addTicketSuccess(res)))
     .catch(err => console.log(err))
@@ -80,7 +80,7 @@ export const ticketReportSuccess = payload => ({
 
 export const ticketReport = payload => dispatch => {
   console.log(payload)
-  axios.get(`http://127.0.0.1:5000/ticket_report/${payload}`)
+  axios.get(`http://ticketbackend.gunjan.tech/ticket_report/${payload}`)
     .then(res => res.data)
     .then(res => dispatch(ticketReportSuccess(res)))
     .catch(err => console.log(err))
@@ -99,7 +99,7 @@ export const viewTicketSuccess = payload => ({
 
 export const viewTicket = (company_id,page,per_page) => dispatch => {
   console.log(company_id,page,per_page)
-  axios.get("http://127.0.0.1:5000/view_tickets",{
+  axios.get("http://ticketbackend.gunjan.tech/view_tickets",{
     params:{
       company_id:company_id,
       page:page,
@@ -123,7 +123,7 @@ export const changeStatus = payload => dispatch => {
     status = payload.status,
     id = payload.id
     console.log(ticket_id,status)
-  axios.get(`http://127.0.0.1:5000/change_status/${ticket_id}/${status}`)
+  axios.get(`http://ticketbackend.gunjan.tech/change_status/${ticket_id}/${status}`)
     .then(res => res.data)
     .then(res=>dispatch(viewTicket(id)))
     .then(res => dispatch(getComment(ticket_id)))
@@ -139,7 +139,7 @@ export const editTicketSuccess = payload => ({
 export const editTicket = payload => dispatch => {
   console.log(payload)
 
-  axios.post('http://127.0.0.1:5000/ticket_update',payload)
+  axios.post('http://ticketbackend.gunjan.tech/ticket_update',payload)
     .then(res => res.data)
     .then(res => dispatch(editTicketSuccess(res)))
     .catch(err => console.log(err))
@@ -154,7 +154,7 @@ export const getCommentSuccess = payload => ({
 export const getComment = payload => dispatch => {
   console.log(payload)
 
-  axios.get(`http://127.0.0.1:5000/get_comments/${payload}`)
+  axios.get(`http://ticketbackend.gunjan.tech/get_comments/${payload}`)
     .then(res => res.data)
     .then(res => dispatch(getCommentSuccess(res)))
     .catch(err => console.log(err))
@@ -170,7 +170,7 @@ export const addComment = payload => dispatch => {
   let data = payload[0],
     id = payload[1]
   console.log(data,payload[1])
-  axios.post('http://127.0.0.1:5000/add_comment',data)
+  axios.post('http://ticketbackend.gunjan.tech/add_comment',data)
     .then(res => res.data)
     .then(res => dispatch(getComment(id)))
     .catch(err => console.log(err))

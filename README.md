@@ -7,7 +7,7 @@ The Ticket management system is used to raise a ticket in perticular organizatio
 The organization is also able to handle the raised tickets.
 
 
-<a href =  "https://bookworlddemo.netlify.app/">
+<a href =  "http://ticket.gunjan.tech/">
   <button style = "background:red,padding:5px">Demo Link</button>
 </a>
 

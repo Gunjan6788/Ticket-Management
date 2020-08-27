@@ -10,7 +10,7 @@ The organization is also able to handle the raised tickets.
 <a href =  "http://ticket.gunjan.tech/">
   <button style = "background:red,padding:5px">Demo Link</button>
 </a>
-
+<li>To login on user or company use: email = test@gmail.com , password = test</li>
 
 To know better about project ,some images of project are shown below:
 <li>Home page of user in which user can add or view tickets.</li>
@@ -26,8 +26,6 @@ To know better about project ,some images of project are shown below:
 
 <li>Company can change the status of the ticket.</li>
 <img src="ticket_management/public/img4.png" style = "margin:20px"/>
-
-<li>To login on user or company use: email = test@gmail.com , password = test</li>
 
 
 ### Getting Started
